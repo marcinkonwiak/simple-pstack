@@ -2,7 +2,7 @@
 
 Invoked when creating a PR or working with commits.
 
-**Commits.** Commit liberally. Rebase into small, ordered commits before opening PRs. Each commit is a future PR: landable, ordered to tell the story. Amend when the fix belongs in a just-made commit. New commit when separable.
+**Commits.** Commit liberally. Rebase into small, ordered commits before opening PRs. Each commit is a future PR: landable, ordered to tell the story. Amend when the fix belongs in a just-made commit. New commit when separable. Commit bodies don't restate the subject.
 
 **PRs.** Run `/deslop` over the diff before commit. Run `/no-comments` before creating final PR. Write every PR title, PR description, and commit body with technical language, ASD-STE100, then apply `/unslop`. Use one word for each action, keep articles, and avoid `-ing` when a plain verb works.
 
