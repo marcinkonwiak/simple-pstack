@@ -6,6 +6,10 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TARGETS=("$HOME/.claude/skills" "$HOME/.agents/skills")
+# Extra Claude config dirs get skills only when they already exist.
+for config in .claude_personal .claude_work; do
+  if [[ -d "$HOME/$config" ]]; then TARGETS+=("$HOME/$config/skills"); fi
+done
 REMOVE=0
 [[ "${1:-}" == "--remove" ]] && REMOVE=1
 
