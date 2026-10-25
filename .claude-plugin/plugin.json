@@ -1,0 +1,9 @@
+{
+  "name": "simple-pstack",
+  "description": "A small selection of Lauren Tan's pstack skills, simplified for Claude.",
+  "author": {
+    "name": "Marcin Konwiak"
+  },
+  "repository": "https://github.com/marcinkonwiak/simple-pstack",
+  "license": "MIT"
+}
