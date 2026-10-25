@@ -1,0 +1,14 @@
+{
+  "name": "simple-pstack",
+  "description": "Marcin's simple-pstack skills.",
+  "owner": {
+    "name": "Marcin Konwiak"
+  },
+  "plugins": [
+    {
+      "name": "simple-pstack",
+      "source": "./",
+      "description": "A small selection of Lauren Tan's pstack skills, simplified for Claude."
+    }
+  ]
+}
