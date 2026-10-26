@@ -7,7 +7,7 @@ description: "Use for 'why does X work this way', 'why we picked Y', design rati
 
 Investigate the motivation and intent behind code.
 
-Companion to the `how` skill. `how` answers what the code does and how it works. `why` answers what forces led to its shape.
+Companion to the **how** skill. **how** answers what the code does and how it works. **why** answers what forces led to its shape.
 
 ## Operating Posture
 
