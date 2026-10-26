@@ -9,7 +9,7 @@ Invoked when creating a PR or working with commits.
 
 **Commits.** Commit liberally. Rebase into small, ordered commits before opening PRs. Each commit is a future PR: landable, ordered to tell the story. Amend when the fix belongs in a just-made commit. New commit when separable. Commit bodies don't restate the subject.
 
-**PRs.** Run `/deslop` over the diff before commit. Run `/no-comments` before creating final PR. Write every PR title, PR description, and commit body with technical language, ASD-STE100, then apply `/unslop`. Use one word for each action, keep articles, and avoid `-ing` when a plain verb works.
+**PRs.** Run the **deslop** skill over the diff before commit. Run the **no-comments** skill before creating final PR. Write every PR title, PR description, and commit body with technical language, ASD-STE100, then apply the **unslop** skill. Use one word for each action, keep articles, and avoid `-ing` when a plain verb works.
 
 **Titles.** Use Conventional Commits in the form `type(scope): subject`. Use `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, or `perf` as the type. Use the changed area as the scope. Keep the subject short and imperative. Name a real symbol when one carries the change. Do not add a trailing period.
 

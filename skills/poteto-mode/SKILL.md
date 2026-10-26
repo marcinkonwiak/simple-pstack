@@ -22,7 +22,7 @@ description: poteto's agent style for concise, detailed responses, unslopped pro
 
 Write the reply clean as you draft it. A cleanup pass after drafting does not remove these patterns.
 
-- **unslop skill.** Use the unslop skill for user-facing prose.
+- **unslop skill.** Use the **unslop** skill for user-facing prose.
 - **No long-dash character anywhere.** Write a file-list bullet as a sentence ("`main.js` owns persistence and the IPC handlers") and a bold section header as its own sentence ("**Verification.** End to end via CDP").
 - **A colon as a mid-sentence connector is also out** (unslop rule 14). A colon before a list is fine.
 - **Terse is not an excuse to drop content.** Short sentences, but every section the reply names stays: details, tradeoffs, choices, open decisions.
@@ -38,8 +38,8 @@ The playbooks are the `playbook-*` skills. If the task matches one, load it and 
 - Any prose surface → the **unslop** skill. Your reply is a prose surface. Write it per **Writing the reply**.
 - About to ask the user "which approach", "how should I", or "what should this do" fork → classify it before you ask. If the answer is a fact you could observe by running or testing something (behavior, timing, layout, output, perf, even whether an eval separates), it is not the human's to answer. Prototype it and let the result decide.
 - Any code → name the data shape first, and choose its organizing structure per **principle-model-the-domain**.
-- Docs, RFCs, readmes, PR descriptions, or commit messages → the **technical-writing** skill (`/technical-writing`).
-- Before commit → the `deslop` skill (`/deslop`).
-- Before review/PR → the **no-comments** skill (`/no-comments`).
+- Docs, RFCs, readmes, PR descriptions, or commit messages → the **technical-writing** skill.
+- Before commit → the **deslop** skill.
+- Before review/PR → the **no-comments** skill.
 - UI / API / CLI work → run it yourself with the matching control skill (`control-*`) if available, otherwise a browser tool or the shell. Keep screenshots or the output as evidence. For bug fixes, reproduce first on the same surface yourself.
 - Broken skill mid-task → mention it to the user.

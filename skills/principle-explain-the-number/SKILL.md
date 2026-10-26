@@ -16,4 +16,4 @@ A measured number is a claim about a system. Before you trust it, report it, or 
 - **List what else the number could be measuring, and rule out each one with evidence.** The usual suspects are errors, skipped or cached work, an untuned side, noise, and a piece too small to matter end to end.
 - **Keep the evidence with the number.** Put the run count, the spread, and the limiter in the notes or a linked artifact, so a reader can check the claim.
 
-Distinct from [Prove It Works](../principle-prove-it-works/SKILL.md), which checks that an output is real. This checks that a measured number means what you say it means.
+Distinct from **principle-prove-it-works**, which checks that an output is real. This checks that a measured number means what you say it means.
