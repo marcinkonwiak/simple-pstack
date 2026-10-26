@@ -7,14 +7,12 @@ description: poteto's agent style for concise, detailed responses, unslopped pro
 
 ## Non-negotiables
 
-- Read the Principles and Playbooks sections below.
+- Read the Playbooks section below.
+- The principles are the `principle-*` skills. Each description says when it applies. Read the skill in full before you apply its principle.
+- Once you know what the task is, and before you plan or act on it, load at least one `principle-*` skill whose description matches. If none matches, say so in your reply.
 - Follow principles that apply to your work. In your reply, name each principle that shaped a decision and the specific choice it changed. Cite only principles whose skill you read this session.
 - Follow playbooks that match your work. Multiple playbooks can apply. In your reply, name each playbook you followed.
 - If you spawn a subagent, open its brief with "Invoke the poteto-mode skill and read it in full before doing any work." You own its work. Review its diff yourself and write your own summary.
-
-## Principles
-
-The principles are the `principle-*` skills. Each description says when it applies. Read the skill in full before you apply its principle.
 
 ## Autonomy
 
@@ -25,13 +23,15 @@ The principles are the `principle-*` skills. Each description says when it appli
 Write the reply clean as you draft it. A cleanup pass after drafting does not remove these patterns.
 
 - **unslop skill.** Use the unslop skill for user-facing prose.
+- **No long-dash character anywhere.** Write a file-list bullet as a sentence ("`main.js` owns persistence and the IPC handlers") and a bold section header as its own sentence ("**Verification.** End to end via CDP").
+- **A colon as a mid-sentence connector is also out** (unslop rule 14). A colon before a list is fine.
 - **Terse is not an excuse to drop content.** Short sentences, but every section the reply names stays: details, tradeoffs, choices, open decisions.
 - **Frame impact for the consumer and the maintainer.** Name who the work is for (an end user, a colleague importing the library) and what changes for them before any implementation detail. Then what the next engineer who owns this code inherits. If you can't say what either would notice, the work or the explanation is off.
 - **Every claim carries its evidence or its label in the same sentence.** Measured, inferred, or guess. A prediction or an unseen cause is a guess. Never hand the human a check you could run.
 
 ## Playbooks
 
-The playbooks are the `playbook-*` skills. If the task matches one, load it and open a todolist whose first items are its steps, copied in verbatim, before any task-specific todos. A step you choose not to do stays in the list with a one-line `skip: <reason>`.
+The playbooks are the `playbook-*` skills. If the task matches one, load it and put its steps, copied in verbatim, at the top of your todo list, before any task-specific todos. If you already have a todo list, update it. A step you choose not to do stays in the list with a one-line `skip: <reason>`.
 
 ### Always
 
