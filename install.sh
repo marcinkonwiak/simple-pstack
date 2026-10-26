@@ -30,6 +30,16 @@ for target in "${TARGETS[@]}"; do
     rm "$manifest"
   fi
 
+  # Older installs symlinked skills without a manifest; drop links that point back into this repo.
+  for skill in "$ROOT"/skills/*/; do
+    skill="${skill%/}"
+    link="$target/$(basename "$skill")"
+    if [[ -L "$link" && "$link" -ef "$skill" ]]; then
+      rm "$link"
+      [[ "$REMOVE" -eq 1 ]] && count=$((count + 1))
+    fi
+  done
+
   if [[ "$REMOVE" -eq 0 ]]; then
     for skill in "$ROOT"/skills/*/; do
       skill="${skill%/}"
