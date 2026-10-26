@@ -5,11 +5,16 @@ description: "Use when making a commit, writing a commit message, or creating or
 
 # Opening a PR
 
-Invoked when creating a PR or working with commits.
+Add these steps to your todo list, copied in verbatim. Mark a step you skip as `skip: <reason>`.
+
+1. Run the **deslop** skill over the diff.
+2. Run the **no-comments** skill over the diff.
+3. Commit, following **Commits** and **Titles** below.
+4. Write the PR title, the PR description, and each commit body in technical language, per ASD-STE100. Use one word for each action, keep articles, and avoid `-ing` when a plain verb works. Follow **Titles** and **Descriptions** below.
+5. Apply the **unslop** skill to the PR title, the PR description, and each commit body.
+6. Open the PR ready for review, following **Forge**, **Built-in PR tool**, and **Readiness** below.
 
 **Commits.** Commit liberally. Rebase into small, ordered commits before opening PRs. Each commit is a future PR: landable, ordered to tell the story. Amend when the fix belongs in a just-made commit. New commit when separable. Commit bodies don't restate the subject.
-
-**PRs.** Run the **deslop** skill over the diff before commit. Run the **no-comments** skill before creating final PR. Write every PR title, PR description, and commit body with technical language, ASD-STE100, then apply the **unslop** skill. Use one word for each action, keep articles, and avoid `-ing` when a plain verb works.
 
 **Titles.** Use Conventional Commits in the form `type(scope): subject`. Use `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, or `perf` as the type. Use the changed area as the scope. Keep the subject short and imperative. Name a real symbol when one carries the change. Do not add a trailing period.
 
