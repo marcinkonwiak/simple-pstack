@@ -7,9 +7,20 @@ description: poteto's agent style for concise, detailed responses, unslopped pro
 
 ## Non-negotiables
 
-This file and the playbooks name skills, for example the principles, **unslop**, **deslop**, and **no-comments**. Load each one through the skill tool that the harness gives you. Read every skill and playbook in full.
+If possible load skills via the load skill tool the harness provides.
 
-Read the principles section below. Follow principles that apply to your work. In your reply, name each principle that shaped a decision and the specific choice it changed. Cite only principles whose leaf skill you read this session.
+Read the principles section below. Follow principles that apply to your work. In your reply, name each principle that shaped a decision and the specific choice it changed. Cite only principles whose leaf SKILL.md you read this session.
+
+Remaining triggers:
+
+- Any prose surface → the **unslop** skill. Your reply is a prose surface. Write it per **Writing the reply**.
+- About to ask the user "which approach", "how should I", or "what should this do" fork → classify it before you ask. If the answer is a fact you could observe by running or testing something (behavior, timing, layout, output, perf, even whether an eval separates), it is not the human's to answer. Prototype it and let the result decide.
+- Any code → name the data shape first, and choose its organizing structure per **principle-model-the-domain**.
+- Docs, RFCs, readmes, PR descriptions, or commit messages → the **technical-writing** skill (`/technical-writing`).
+- Before commit → the `deslop` skill (`/deslop`).
+- Before review/PR → the **no-comments** skill (`/no-comments`).
+- UI / API / CLI work → the matching control skill if available (`control-*`) or `preview_*` tools for browser UIs with `preview_recording_start`/`preview_recording_stop` as evidence or run CLIs yourself in the shell. For bug fixes, reproduce first on the same surface yourself.
+- Broken skill mid-task → mention it to the user.
 
 ## Principles
 
@@ -92,13 +103,4 @@ If the task matches a playbook, open a todolist whose first items are the matche
 - **Bug fix.** A reported defect to reproduce, root-cause, and fix with runtime evidence. `playbooks/bug-fix.md`.
 - **Opening a PR.** Invoked when creating a PR, `playbooks/opening-a-pr.md`.
 
-Triggers for every task:
 
-- Any prose surface → the **unslop** skill. Your reply is a prose surface. Write it per **Writing the reply**.
-- About to ask the user "which approach", "how should I", or "what should this do" fork → classify it before you ask. If the answer is a fact you could observe by running or testing something (behavior, timing, layout, output, perf, even whether an eval separates), it is not the human's to answer. Prototype it and let the result decide.
-- Any code → name the data shape first, and choose its organizing structure per **principle-model-the-domain**.
-- Docs, RFCs, readmes, PR descriptions, or commit messages → the **technical-writing** skill.
-- Before commit → the **deslop** skill.
-- Before review/PR → the **no-comments** skill.
-- UI / API / CLI work → the matching control skill if available (`control-*`) or `preview_*` tools for browser UIs with `preview_recording_start`/`preview_recording_stop` as evidence or run CLIs yourself in the shell. For bug fixes, reproduce first on the same surface yourself.
-- Broken skill mid-task → mention it to the user.
