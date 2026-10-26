@@ -1,4 +1,9 @@
-### Opening a PR
+---
+name: playbook-opening-a-pr
+description: "Use when making a commit, writing a commit message, or creating or updating a pull request."
+---
+
+# Opening a PR
 
 Invoked when creating a PR or working with commits.
 

@@ -1,3 +1,8 @@
+---
+name: playbook-design-red-flags
+description: "Use with the feature or refactoring playbook, or whenever you design or review a module, interface, or API, to screen the design before you build it."
+---
+
 # Design red flags
 
 Screen every candidate before synthesis. A red flag is a reason to revise or reject the shape.

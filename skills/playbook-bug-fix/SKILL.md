@@ -1,4 +1,9 @@
-### Bug fix
+---
+name: playbook-bug-fix
+description: "Use when fixing a reported defect, a regression, or a failing test."
+---
+
+# Bug fix
 
 **You own this task. Plan, review, verify.** Delegate investigation and the fix to subagents, stay in the lead.
 
@@ -8,6 +13,6 @@ Be scientific. Every shipped line traces to runtime evidence. Belt-and-suspender
 2. Binary-search the cause. Form the candidate hypotheses, then rule them out until one survives. Seed them with `how` over the affected subsystem and the **why** skill for regression history. Each pass, take the split that cuts the most remaining problem space, get runtime evidence, eliminate. When program state is unclear, add instrumentation or logging and read it as the code runs. Don't guess. Drive a long or stubborn hunt. Confirm the surviving *mechanism* with evidence.
 3. Plan the fix. If it crosses a function boundary delegate implementation to a subagent.
 4. Verify on the same surface. The original repro now passes. "Inconclusive" or wrong-surface is not a pass. Flag it. Unit tests show branch behavior, not bug absence.
-5. Run **Opening a PR**.
+5. Run the **playbook-opening-a-pr** skill.
 
 **Reply:** what was broken, root cause, fix, how you verified. Paste failing-then-passing repro output verbatim.
