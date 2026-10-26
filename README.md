@@ -8,7 +8,7 @@ cd simple-pstack
 ./install.sh
 ```
 
-The installer links the skills into `~/.claude/skills` and `~/.agents/skills`. Keep the cloned repo in place.
+The installer copies the skills into `~/.claude/skills` and `~/.agents/skills` and records them in a `.simple-pstack-installed` file in each directory. After a `git pull`, run `./install.sh` again to update the copies. `./install.sh --remove` removes the recorded skills.
 
 ## claude.ai, Cowork, and cloud sessions
 

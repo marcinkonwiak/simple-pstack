@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-# Link every skill into Claude Code and Codex. Safe to re-run.
-# Usage: ./install.sh            link skills
-#        ./install.sh --remove   remove the links this repo owns
+# Copy every skill into Claude Code and Codex. Safe to re-run.
+# Usage: ./install.sh            install or update skills
+#        ./install.sh --remove   remove the skills this repo installed
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+MANIFEST=".simple-pstack-installed"
 TARGETS=("$HOME/.claude/skills" "$HOME/.agents/skills")
 # Extra Claude config dirs get skills only when they already exist.
 for config in .claude_personal .claude_work; do
@@ -15,17 +16,19 @@ REMOVE=0
 
 for target in "${TARGETS[@]}"; do
   mkdir -p "$target"
+  manifest="$target/$MANIFEST"
   count=0
 
-  # Drop links that point into this repo, so renamed or deleted skills don't linger.
-  for link in "$target"/*; do
-    [[ -L "$link" ]] || continue
-    source="$(readlink "$link")"
-    [[ "$source" == /* ]] || source="$(dirname "$link")/$source"
-    [[ "$(dirname "$source")" -ef "$ROOT/skills" ]] || continue
-    rm "$link"
-    [[ "$REMOVE" -eq 1 ]] && count=$((count + 1))
-  done
+  # Drop every skill the last install recorded, so renamed or deleted skills don't linger.
+  if [[ -f "$manifest" ]]; then
+    while IFS= read -r name; do
+      [[ -n "$name" && "$name" != */* && "$name" != .* ]] || continue
+      [[ -e "$target/$name" || -L "$target/$name" ]] || continue
+      rm -rf "${target:?}/$name"
+      [[ "$REMOVE" -eq 1 ]] && count=$((count + 1))
+    done < "$manifest"
+    rm "$manifest"
+  fi
 
   if [[ "$REMOVE" -eq 0 ]]; then
     for skill in "$ROOT"/skills/*/; do
@@ -35,11 +38,12 @@ for target in "${TARGETS[@]}"; do
         printf 'skip %s (already exists in %s)\n' "$name" "$target"
         continue
       fi
-      ln -s "$skill" "$target/$name"
+      cp -R "$skill" "$target/$name"
+      printf '%s\n' "$name" >> "$manifest"
       count=$((count + 1))
     done
-    printf 'linked %d skills into %s\n' "$count" "$target"
+    printf 'installed %d skills into %s\n' "$count" "$target"
   else
-    printf 'removed %d links from %s\n' "$count" "$target"
+    printf 'removed %d skills from %s\n' "$count" "$target"
   fi
 done
