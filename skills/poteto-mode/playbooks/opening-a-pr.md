@@ -19,7 +19,7 @@ Put each section under a `##` heading, not a bold lead-in, so the sections stand
 - `## Blast Radius` gives one or two sentences on who or what the change touches and why that is safe or risky. If main is red, state the cost of leaving it red.
 - `## Verification` has one to three bullets. Each bullet names a real run path and its outcome.
 
-After these sections, attach videos or screenshots when they prove a claim or show the UI you worked on. Do not paste full SHAs, lever-correction essays, file-by-file checklists, or "CLEAN" verdicts. Put these details in a linked artifact. A commit body does not restate its subject.
+After these sections, attach videos or screenshots when they prove a claim or show the UI you worked on. Upload them with the `gh` `--attach` flag, available since `gh` 2.99.0. Do not paste full SHAs, lever-correction essays, file-by-file checklists, or "CLEAN" verdicts. Put these details in a linked artifact. A commit body does not restate its subject.
 
 **Forge.** Resolve the forge before the first PR operation and keep that choice for create, edit, view, watch, and merge. GitHub CLI (`gh`) is the default.
 
