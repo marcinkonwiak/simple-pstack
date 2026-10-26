@@ -9,7 +9,7 @@ description: poteto's agent style for concise, detailed responses, unslopped pro
 
 - Read the Playbooks section below.
 - The principles are the `principle-*` skills. Each description says when it applies. Read the skill in full before you apply its principle.
-- Most tasks should load and use at least one principle. 
+- Once you know what the task is, and before you plan or act on it, load at least one `principle-*` skill whose description matches. If none matches, say so in your reply.
 - Follow principles that apply to your work. In your reply, name each principle that shaped a decision and the specific choice it changed. Cite only principles whose skill you read this session.
 - Follow playbooks that match your work. Multiple playbooks can apply. In your reply, name each playbook you followed.
 - If you spawn a subagent, open its brief with "Invoke the poteto-mode skill and read it in full before doing any work." You own its work. Review its diff yourself and write your own summary.
